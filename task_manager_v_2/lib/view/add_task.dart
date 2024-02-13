@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager_v_2/model/to_do_list.dart';
 import '../data/list_of_task.dart';
-import '../main.dart';
 class AddTask extends StatefulWidget {
   AddTask({Key? key});
 
@@ -111,13 +110,11 @@ class _AddTaskState extends State<AddTask> {
   }
 
   void _addTask() {  
-        print(1);
-  
-    TaskManager taskManager = locator<TaskManager>();
+    TaskManager taskManager = TaskManager(taskTitle: '',taskDescription: '',taskPriority: '');
     
     taskManager.taskTitle = _titleController.text;
     taskManager.taskDescription = _descriptionController.text;
     taskManager.taskPriority =TaskPriority[_selectedTaskPriority.indexOf(true)].toString();
-    listOfTaskManager.add(taskManager);
+    TaskManagerList.addTaskManager(taskManager);
   }
 }

@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class TaskManager {
   //late is a keyword used to declare a variable as being mutable
@@ -15,26 +14,5 @@ class TaskManager {
     required this.taskPriority,
   }):taskCratedDate=DateTime.now(),state=false;
 
-Map<String, dynamic> toJson() {
-    return {
-      'taskTitle': taskTitle,
-      'taskDescription': taskDescription,
-      'taskPriority': taskPriority,
-      // Add more fields if necessary
-    };
-  }
-  toMap(){
-return {
-  'taskTitle': taskTitle,
-  'taskDescription': taskDescription,
-  'taskPriority': taskPriority,
-  'taskCreatedDate': taskCratedDate,
-  'state': state,
-};
-
-
   }
   
-}
-//This enum is used to define the different priorities of the tasks
-//////////////////////////////////////////////////////////////////
