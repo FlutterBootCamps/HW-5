@@ -1,23 +1,16 @@
-# HW-5
-
-## Description:
-Your task is to create an app consisting of 3 screens
+![hw5-1](https://github.com/mohammed0172000/HW-5/assets/82112256/5f1ae3cc-38bb-4117-9d77-a031cbe00b6b)
 
 
-## Requirements:
-You must utilize the following:  
--	get_it 
-- Shared preferences 
- 
-## Submission:
-1. Flutter Project:
-    - Submit the complete Flutter project folder, including all necessary files (screens and components).
-2. GitHub Submission:
-   - Create a Fork from the project’s GitHub repository.
-   - Create a new branch with your name.
-   - Commit frequently with descriptive messages to show your progress.
-   - Finally, create a Pull Request to the project’s original repository.
-3. Screenshots of your app.
 
-## Deadline: 
-13/2/2024  9:59 AM
+
+
+
+![hw5-2](https://github.com/mohammed0172000/HW-5/assets/82112256/716e6ccc-a2fa-49d7-a977-1e2939e4d2ee)
+
+
+
+
+
+
+
+![hm5-3](https://github.com/mohammed0172000/HW-5/assets/82112256/99b4212f-3fd7-4330-96e9-43f9414d7c0d)
