@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hw_5_shaimaa_althubaiti/helper/extention.dart';
+import 'package:hw_5_shaimaa_althubaiti/main.dart';
+import 'package:hw_5_shaimaa_althubaiti/screens/bottom_nav.dart';
 import 'package:hw_5_shaimaa_althubaiti/screens/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shimmer/shimmer.dart';
@@ -15,21 +17,21 @@ class LogInScreen extends StatefulWidget {
 
 class _LogInScreenState extends State<LogInScreen> {
   final _formKey = GlobalKey<FormState>();
-  final controller = TextEditingController();
+  final controllerr = TextEditingController();
 
   // SingingCharacter? _character = SingingCharacter.female;
   late final String type;
 
   @override
   void dispose() {
-    controller.dispose();
+    controllerr.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Color.fromARGB(136, 199, 173, 222),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -62,80 +64,43 @@ class _LogInScreenState extends State<LogInScreen> {
                       // The validator receives the text that the user has entered.
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return const AlertDialog(
-                                // alert to the user to inter something
-                                content: Text(
-                                  "Please enter some text",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                              );
-                            },
-                          );
+                          
                         }
                         return null;
                       },
-                      controller: controller,
+                      controller: controllerr,
                     ),
                   ),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                // Column(
-                //   children: <Widget>[
-                //     ListTile(
-                //       title: const Text('Lafayette'),
-                //       leading: Radio<SingingCharacter>(
-                //         value: SingingCharacter.female,
-                //         groupValue: _character,
-                //         onChanged: (SingingCharacter? value) {
-                //           setState(() {
-                //             _character = value;
-                //             type = value as String;
-                //           });
-                //         },
-                //       ),
-                //     ),
-                //     ListTile(
-                //       title: const Text('Thomas Jefferson'),
-                //       leading: Radio<SingingCharacter>(
-                //         value: SingingCharacter.male,
-                //         groupValue: _character,
-                //         onChanged: (SingingCharacter? value) {
-                //           setState(() {
-                //             _character = value;
-                //             type = value as String;
-                //           });
-                //         },
-                //       ),
-                //     ),
-                //   ],
-                // ),
-
-                Shimmer.fromColors(
-                  baseColor: Color.fromARGB(86, 106, 103, 103),
-                  highlightColor: Colors.white,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Validate returns true if the form is valid, or false otherwise.
-                      if (_formKey.currentState!.validate()) {
-                        addStringToSF() async {
-                          SharedPreferences prefs =
-                              await SharedPreferences.getInstance();
-                          prefs.setString('controller', "name");
-                        }
-
-                        context.pushScreen(view: HomeScreen());
-                      }
-                    },
-                    child: const Text('Submit'),
-                  ),
-                )
-              ],
+                ElevatedButton(
+                  onPressed: () {
+                    // Validate returns true if the form is valid, or false otherwise.
+                    if (!_formKey.currentState!.validate()) {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return const AlertDialog(
+                              // alert to the user to inter something
+                              content: Text(
+                                "Please enter some text",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: 20),
+                              ),
+                            );
+                          },
+                        );
+                    } else {
+                      String name = controllerr.text;
+                      prefs?.setString("name", name);
+                      context.pushScreen(view: const BottomNavScreen());
+                    }
+                  },
+                  child: const Text('Submit',style:TextStyle(color: Colors.black,),
+                ),
+                                )],
             ),
           ),
         ],
