@@ -1,23 +1,27 @@
 # HW-5
 
-## Description:
-Your task is to create an app consisting of 3 screens
 
 
-## Requirements:
-You must utilize the following:  
--	get_it 
-- Shared preferences 
- 
-## Submission:
-1. Flutter Project:
-    - Submit the complete Flutter project folder, including all necessary files (screens and components).
-2. GitHub Submission:
-   - Create a Fork from the project’s GitHub repository.
-   - Create a new branch with your name.
-   - Commit frequently with descriptive messages to show your progress.
-   - Finally, create a Pull Request to the project’s original repository.
-3. Screenshots of your app.
+Intro Page:
 
-## Deadline: 
-13/2/2024  9:59 AM
+It's a basic page with pic title and a button to move to the "Profile Page".
+
+![Screenshot_1707781712](https://github.com/Trajoon/HW-5/assets/153893124/0a34cc42-8d6e-408f-ba94-f200ff996aa0)
+---------------------------------------------------------------------------------------------------------------
+
+Profile Page:
+
+It contains info about me and the data will be saved on the page and button to move "Interests Page".
+
+![Screenshot_1707781712](https://github.com/Trajoon/HW-5/assets/153893124/1eda6e33-e3fe-4680-a20d-0b56b6f8c9d0)
+---------------------------------------------------------------------------------------------------------------
+
+Interests Page:
+
+it contains info about my interest
+
+![Screenshot_1707781779](https://github.com/Trajoon/HW-5/assets/153893124/8090ac07-924d-4487-9803-4cbbe23a777d)
+---------------------------------------------------------------------------------------------------------------
+
+
+
