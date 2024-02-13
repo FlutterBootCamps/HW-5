@@ -1,6 +1,9 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:task_manager_v_2/model/to_do_list.dart';
 import '../data/list_of_task.dart';
+import '../main.dart';
 class AddTask extends StatefulWidget {
   AddTask({Key? key});
 
@@ -110,11 +113,11 @@ class _AddTaskState extends State<AddTask> {
   }
 
   void _addTask() {  
-    TaskManager taskManager = TaskManager(taskTitle: '',taskDescription: '',taskPriority: '');
-    
+    TaskManager taskManager = TaskManager(taskTitle: '',taskDescription: '',taskPriority: '',taskCratedDate:"",state: false);
     taskManager.taskTitle = _titleController.text;
     taskManager.taskDescription = _descriptionController.text;
     taskManager.taskPriority =TaskPriority[_selectedTaskPriority.indexOf(true)].toString();
-    TaskManagerList.addTaskManager(taskManager);
+    TaskManagerSharedPreferences.addTaskManager(taskManager);
+
   }
 }
