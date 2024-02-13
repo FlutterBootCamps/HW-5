@@ -1,23 +1,12 @@
-# HW-5
+# note_app
 
-## Description:
-Your task is to create an app consisting of 3 screens
+login page
+![Screenshot_1707814644](https://github.com/YaYa-2/HW-5/assets/130002587/5809ef14-78f8-459c-9361-dff2a5774034)
 
 
-## Requirements:
-You must utilize the following:  
--	get_it 
-- Shared preferences 
- 
-## Submission:
-1. Flutter Project:
-    - Submit the complete Flutter project folder, including all necessary files (screens and components).
-2. GitHub Submission:
-   - Create a Fork from the project’s GitHub repository.
-   - Create a new branch with your name.
-   - Commit frequently with descriptive messages to show your progress.
-   - Finally, create a Pull Request to the project’s original repository.
-3. Screenshots of your app.
+home page 
+![Screenshot_1707814650](https://github.com/YaYa-2/HW-5/assets/130002587/2037c65b-d2e4-4140-8fa4-ff16c0b31177)
 
-## Deadline: 
-13/2/2024  9:59 AM
+
+note page
+![Screenshot_1707814657](https://github.com/YaYa-2/HW-5/assets/130002587/ddffc0d6-18cf-4f33-bcfd-4778eee32009)
